@@ -53,6 +53,9 @@ function App() {
     @media (max-width: 412px) {
       flex-direction: column;
     }
+    @media (min-width: 700px) and (max-width: 830px){
+      flex-direction: column;
+    }
 
 
 
@@ -64,6 +67,10 @@ function App() {
     height: min-content;
     margin: 10vh auto;
     margin-top: 5vh;
+    @media (min-width: 700px) and (max-width: 830px){
+      margin-right: 1vw;
+      margin: 5vh auto;
+    }
   
   `
 
@@ -72,6 +79,7 @@ function App() {
     display:flex;
     flex-direction: row;
     margin: 0 auto;
+    
   
   `
 
@@ -80,6 +88,9 @@ function App() {
     margin-left: 70%;
     @media (max-width: 412px) {
       margin-left: 8vw;
+    }
+    @media (min-width: 700px) and (max-width: 830px){
+      margin-left: 40%;
     }
   
   `

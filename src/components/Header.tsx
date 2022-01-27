@@ -16,6 +16,12 @@ export default function Header() {
 	position: relative;
 	float: right;
   margin: 2vh;
+  @media (min-width: 700px) and (max-width: 830px){
+    margin-left: 50%;
+    margin: 2vh;
+    margin-right: 15vw;
+
+  }
  
   `
 
