@@ -77,7 +77,7 @@ function App() {
 
   const ImgTucano = styled.img`
   
-    margin-left: 70%
+    margin-left: 70%;
     @media (max-width: 412px) {
       margin-left: 8vw;
     }
