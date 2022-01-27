@@ -16,7 +16,7 @@ export default function MediaCard() {
     @media (max-width: 412px) {
 
       margin: 0 auto;
-      height: 53vh;
+      height: 55vh;
       margin-bottom: 1vh;
     }
 
