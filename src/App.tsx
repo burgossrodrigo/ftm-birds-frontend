@@ -67,6 +67,23 @@ function App() {
   
   `
 
+  const ImgWrapper = styled.div`
+  
+    display:flex;
+    flex-direction: row;
+    margin: 0 auto;
+  
+  `
+
+  const ImgTucano = styled.img`
+  
+    margin-left: 70%
+    @media (max-width: 412px) {
+      margin-left: 8vw;
+    }
+  
+  `
+
 
 
   return (
@@ -75,8 +92,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <AppProvider>     
         <div className="App">
-          <img src={logo} alt="logo" width={200} style={{}} />
-          <img src={tucano} alt="tucano" width={200} />
+          <ImgWrapper>
+            <img src={logo} alt="logo" width={200} style={{}} />
+            <ImgTucano src={tucano} alt="tucano" width={200} />
+          </ImgWrapper>
           <Header />
           <StyledWrapper>
           <MediaCard />
