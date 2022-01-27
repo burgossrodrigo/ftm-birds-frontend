@@ -16,7 +16,13 @@ export default function Wallet() {
   padding: 25px;
   margin-left: 5vw;
   margin-bottom: 5vh;
-  background-img: url(${tucano})
+
+  @media (max-width: 768px) {
+    margin-top: 10vh;
+    margin: 0 auto;
+    height: 53vh;
+    margin-bottom: 5vh;
+  }
 
 `
 

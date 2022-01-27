@@ -50,6 +50,9 @@ function App() {
   
     display: flex;
     flex-direction: row;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   
   `
 
@@ -78,7 +81,7 @@ function App() {
             <Typography variant='h5'>
               Countdown
             </Typography>
-            <Typography variant='h1'>
+            <Typography variant='h3'>
               <Countdown date={Date.parse('2022-02-04T21:00:00Z')} />
             </Typography>
           </CountdownWrapper>
