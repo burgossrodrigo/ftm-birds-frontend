@@ -53,6 +53,9 @@ function App() {
     @media (max-width: 412px) {
       flex-direction: column;
     }
+
+
+
   
   `
 
