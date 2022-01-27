@@ -12,14 +12,14 @@ export default function Wallet() {
   margin-top: 5vh;
   height: 75vh;
   background-color: #FF9F24;
-  padding: 25px;
+  padding: 5vw;
   margin-left: 5vw;
   margin-bottom: 5vh;
 
-  @media (max-width: 768px) {
+  @media (max-width: 412px) {
     margin-top: 10vh;
     margin: 0 auto;
-    height: 53vh;
+    height: 58vh;
     margin-bottom: 5vh;
   }
 
@@ -74,7 +74,7 @@ const StyledSpan = styled.span`
         No transaction to be displayed
       </CardContent>
     <StyledCardActions>
-    <Button variant="contained" onClick={() => {connect()}}>{ active ? 'Connected' : 'Connect to MetaMask'}</Button>
+    <Button variant="contained" onClick={() => {connect()}}>{ active ? 'Connected' : 'Connect'}</Button>
       <Button variant="contained" onClick={() => {disconnect()}}>Disconnect</Button>
     </StyledCardActions>
   </StyledCard>

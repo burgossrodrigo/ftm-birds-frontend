@@ -50,7 +50,7 @@ function App() {
   
     display: flex;
     flex-direction: row;
-    @media (max-width: 768px) {
+    @media (max-width: 412px) {
       flex-direction: column;
     }
   

@@ -9,12 +9,12 @@ export default function MediaCard() {
     margin-top: 5vh;
     height: 70vh;
     background-color: #00C7DA;
-    padding: 25px;
+    padding: 5vw;
     margin-left: 5vw;
     margin-bottom: 5vh;
     
-    @media (max-width: 768px) {
-      margin-top: 10vh;
+    @media (max-width: 412px) {
+
       margin: 0 auto;
       height: 53vh;
       margin-bottom: 1vh;

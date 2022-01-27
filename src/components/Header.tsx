@@ -90,7 +90,7 @@ export default function Header() {
         <StyledButton 
         color="secondary" 
         variant="contained" 
-        onClick={() => { setNetwork(); dispatch({type: 'OPEN_WALLET', payload: true}); }}
+        onClick={() => { setNetwork()  }}
         >Connect to right network
         </StyledButton>        
       
@@ -115,7 +115,7 @@ export default function Header() {
       <Backdrop
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={state.openWallet}
-        onClick={() => { dispatch({type: 'CLOSE_WALLET', payload: false})}}
+        onClick={() => { dispatch({type: 'CLOSE_WALLET', payload: false}); }}
       >
         <Wallet />
       </Backdrop>
