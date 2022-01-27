@@ -7,7 +7,10 @@ import tucano from './static/tucano.png'
 import logo from './static/logo.png'
 import { Web3ReactProvider } from '@web3-react/core'
 import { AppProvider } from './state/Context'
-import { Web3Provider } from "@ethersproject/providers";
+import { Web3Provider } from "@ethersproject/providers"
+import Countdown from 'react-countdown';
+import { Typography } from '@mui/material'
+import styled from 'styled-components'
 
 const getLibrary = (provider: any, connector: any) => {
   const library = new Web3Provider(provider);
@@ -43,6 +46,21 @@ declare module '@mui/material/styles' {
 
 function App() {
 
+  const StyledWrapper = styled.div`
+  
+    display: flex;
+    flex-direction: row;
+  
+  `
+
+  const CountdownWrapper = styled.div`
+  
+    height: min-content;
+    margin: 10vh auto;
+    margin-top: 5vh;
+  
+  `
+
 
 
   return (
@@ -54,7 +72,17 @@ function App() {
           <img src={logo} alt="logo" width={200} style={{}} />
           <img src={tucano} alt="tucano" width={200} />
           <Header />
+          <StyledWrapper>
           <MediaCard />
+          <CountdownWrapper>
+            <Typography variant='h5'>
+              Countdown
+            </Typography>
+            <Typography variant='h1'>
+              <Countdown date={Date.parse('2022-02-04T21:00:00Z')} />
+            </Typography>
+          </CountdownWrapper>
+          </StyledWrapper>
           <BlockNumber />
         </div>    
       </AppProvider>
