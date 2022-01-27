@@ -1,7 +1,18 @@
 import { useWeb3React } from '@web3-react/core'
 import React from 'react';
+import styled from 'styled-components'
 
 const BlockNumber = () => {
+
+const StyledSpan = styled.span`
+
+    cursor: pointer;
+    margin-left: 80%;
+    margin-bottom: 5%
+
+
+`
+
   const { chainId, library } = useWeb3React()
 
   const [blockNumber, setBlockNumber] = React.useState<number>()
@@ -38,11 +49,7 @@ const BlockNumber = () => {
 
   return (
     <>
-      <span>Block Number</span>
-      <span role="img" aria-label="numbers">
-        🔢
-      </span>
-      <span>{blockNumber === null ? 'Error' : blockNumber ?? ''}</span>
+      <StyledSpan>{blockNumber === null ? 'Error' : blockNumber ?? ' '}</StyledSpan>
     </>
   )
 }

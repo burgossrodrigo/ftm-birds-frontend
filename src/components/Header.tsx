@@ -83,14 +83,14 @@ export default function Header() {
         
         ?
         
-        chainId !== 250 && chainId !== undefined
+        chainId !== 250
 
         ?
 
         <StyledButton 
         color="secondary" 
         variant="contained" 
-        onClick={() => { setNetwork() }}
+        onClick={() => { setNetwork(); dispatch({type: 'OPEN_WALLET', payload: true}); }}
         >Connect to right network
         </StyledButton>        
       

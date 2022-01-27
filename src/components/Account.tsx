@@ -1,6 +1,8 @@
 import { useWeb3React } from '@web3-react/core'
 import { Button } from '@mui/material'
 import styled from 'styled-components'
+import { AppContext } from '../state/Context'
+import { useContext } from 'react'
 
 const Account = () => {
 
@@ -15,11 +17,12 @@ const Account = () => {
 
 
   const { account } = useWeb3React()
+  const { state, dispatch } = useContext(AppContext);
 
   return (
     <>
       
-      <StyledButton color="secondary" variant="contained" >
+      <StyledButton color="secondary" variant="contained" onClick={() => { dispatch({type: 'OPEN_WALLET', payload: true}); console.log(state.openWallet)}} >
         {account === null
           ? '-'
           : account

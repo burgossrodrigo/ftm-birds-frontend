@@ -32,6 +32,11 @@ const StyledImg = styled.img`
   float: left;
 
 `
+const StyledSpan = styled.span`
+
+  cursor: pointer;
+
+`
 
   const { active, account, activate, deactivate } = useWeb3React()
 
@@ -57,15 +62,14 @@ const StyledImg = styled.img`
       <StyledImg src={ftm} alt="ftm" width={80} />
       <CardContent>
         <Typography>
-        {active ? <span>Connected with <b>{account?.substring(0, 6)}...{account?.substring(account?.length - 4)}</b></span> : 'No wallet connected'}
+        {active ? <StyledSpan onClick={() => {window.open('https://ftmscan.com/address/' + account)}}>Connected with <b>{account?.substring(0, 6)}...{account?.substring(account?.length - 4)}</b></StyledSpan> : 'No wallet connected'}
         </Typography>
       </CardContent>
       <CardContent>
         No transaction to be displayed
       </CardContent>
     <StyledCardActions>
-    <Button variant="contained" onClick={() => {connect()}}>Connect to MetaMask</Button>
-      {active ? <span>Connected with <b>{account?.substring(0, 6)}...{account?.substring(account?.length - 4)}</b></span> : <div />}
+    <Button variant="contained" onClick={() => {connect()}}>{ active ? 'Connected' : 'Connect to MetaMask'}</Button>
       <Button variant="contained" onClick={() => {disconnect()}}>Disconnect</Button>
     </StyledCardActions>
   </StyledCard>
