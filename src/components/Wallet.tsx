@@ -23,6 +23,11 @@ export default function Wallet() {
     margin-bottom: 5vh;
   }
 
+  @media (min-width: 413px) and (max-width: 830px){
+    height: 35vh;
+
+  }
+
 `
 
 const StyledCardActions = styled(CardActions)`
