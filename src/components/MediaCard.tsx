@@ -7,7 +7,7 @@ export default function MediaCard() {
   const StyledCard = styled(Card)`
   
     margin-top: 5vh;
-    height: 70vh;
+    height: 60vh;
     background-color: #00C7DA;
     padding: 5vw;
     margin-left: 5vw;
