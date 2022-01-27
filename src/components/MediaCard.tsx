@@ -17,7 +17,7 @@ export default function MediaCard() {
       margin-top: 10vh;
       margin: 0 auto;
       height: 53vh;
-      margin-bottom: 5vh;
+      margin-bottom: 1vh;
     }
 
 
