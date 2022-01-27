@@ -6,7 +6,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import tucano from './static/tucano.png'
 import logo from './static/logo.png'
 import { Web3ReactProvider } from '@web3-react/core'
-import Web3 from 'web3'
 import { AppProvider } from './state/Context'
 import { Web3Provider } from "@ethersproject/providers";
 

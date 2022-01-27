@@ -1,6 +1,6 @@
 import { useWeb3React } from "@web3-react/core"
 import { injected } from "../constants/connectors"
-import { Button, Card, CardActions, CardContent, Typography, Divider } from '@mui/material'
+import { Button, Card, CardActions, CardContent, Typography } from '@mui/material'
 import styled from 'styled-components'
 import ftm from '../static/ftm.png'
 import tucano from '../static/tucano.png'
