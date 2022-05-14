@@ -8,8 +8,6 @@ import logo from './static/logo.png'
 import { Web3ReactProvider } from '@web3-react/core'
 import { AppProvider } from './state/Context'
 import { Web3Provider } from "@ethersproject/providers"
-import Countdown from 'react-countdown';
-import { Typography } from '@mui/material'
 import styled from 'styled-components'
 
 const getLibrary = (provider: any, connector: any) => {
@@ -62,18 +60,6 @@ function App() {
   
   `
 
-  const CountdownWrapper = styled.div`
-  
-    height: min-content;
-    margin: 10vh auto;
-    margin-top: 5vh;
-    @media (min-width: 700px) and (max-width: 830px){
-      margin-right: 1vw;
-      margin: 5vh auto;
-    }
-  
-  `
-
   const ImgWrapper = styled.div`
   
     display:flex;
@@ -110,14 +96,6 @@ function App() {
           <Header />
           <StyledWrapper>
           <MediaCard />
-          <CountdownWrapper>
-            <Typography variant='h5'>
-              Countdown
-            </Typography>
-            <Typography variant='h3'>
-              <Countdown date={Date.parse('2022-02-04T21:00:00Z')} />
-            </Typography>
-          </CountdownWrapper>
           </StyledWrapper>
           <BlockNumber />
         </div>    
