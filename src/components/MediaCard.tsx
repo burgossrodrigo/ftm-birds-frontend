@@ -13,12 +13,11 @@ padding: 5vw;
 margin: 5vh auto;
 @media (max-width: 412px) {
   margin: 0 auto;
-  height: 65vh;
+  height: max-content;
   margin-bottom: 1vh;
 }
-
 @media (min-width: 413px) and (max-width: 830px){
-  height: 40vh;
+  height: max-content;
 }
 `
 const StyledButton = styled(Button)`
