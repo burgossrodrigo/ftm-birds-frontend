@@ -7,7 +7,7 @@ import gif from '../static/gif.gif'
 
 const StyledCard = styled(Card)`  
 margin-top: 5vh;
-height: 65vh;
+height: max-content;
 background-color: #00C7DA;
 padding: 5vw;
 margin: 5vh auto;
@@ -39,7 +39,7 @@ export default function MediaCard() {
 
 
     return (
-      <StyledCard sx={{ maxWidth: 500 }} color="primary">
+      <StyledCard color="primary">
         <CardMedia
           component="img"
           height="430"
