@@ -1,7 +1,9 @@
+import { useContext, useState } from 'react'
+import { AppContext } from '../state/Context'
 import { Card, CardActions, CardMedia, Button } from '@mui/material'
 import { useWeb3React } from '@web3-react/core'
 import { SelectCoin } from './dropdown'
-import { mint } from '../constants'
+import { mint, mintUSD, getMaticPrice } from '../constants'
 import styled from 'styled-components'
 import gif from '../static/gif.gif'
 
@@ -35,6 +37,10 @@ gap: 2vw;
 export default function MediaCard() {
 
     const { active, account } = useWeb3React()
+    const { state } = useContext(AppContext)
+    const [ maticPrice, setMaticPrice] = useState<any>();
+    getMaticPrice().then((res: any) => { setMaticPrice(res) })
+
 
 
     return (
@@ -47,8 +53,15 @@ export default function MediaCard() {
         />
         <StyledCardActions>
           <SelectCoin />
-          <StyledButton disabled={!active} onClick={() => { mint(account) }} size="large" variant="contained">Mint</StyledButton>
+          <StyledButton disabled={!active} onClick={() => {
+             state.mintEth === true
+             ?
+             mint(account)
+             :
+             mintUSD(account) 
+             }} size="large" variant="contained">Mint</StyledButton>
         </StyledCardActions>
+        {maticPrice} OIII
       </StyledCard>
     );
 }

@@ -216,11 +216,11 @@ export interface Birds extends BaseContract {
      */
     transferOwnership(newOwner: string): NonPayableTransactionObject<void>;
 
-    setAddressPriceFeed(_address: string): NonPayableTransactionObject<void>;
+    setBaseURI(URI: string): NonPayableTransactionObject<void>;
 
-    setUsdAddress(_address: string): NonPayableTransactionObject<void>;
-
-    setWallet(_address: string): NonPayableTransactionObject<void>;
+    setMintingPrice(
+      _price: number | string | BN
+    ): NonPayableTransactionObject<void>;
 
     getLatestPrice(): NonPayableTransactionObject<string>;
 
@@ -231,9 +231,7 @@ export interface Birds extends BaseContract {
     minBirdForUSD(
       _to: string,
       _amount: number | string | BN
-    ): PayableTransactionObject<void>;
-
-    setBaseURI(baseURI: string): NonPayableTransactionObject<void>;
+    ): NonPayableTransactionObject<void>;
 
     withdrawUsd(): NonPayableTransactionObject<void>;
 

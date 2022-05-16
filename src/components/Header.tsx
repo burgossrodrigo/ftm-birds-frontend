@@ -54,7 +54,7 @@ export default function Header() {
       //@ts-ignore
       await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: 250 }],
+        params: [{ chainId: 137 }],
       });
     } catch (switchError) {
       // This error code indicates that the chain has not been added to MetaMask.
@@ -64,7 +64,7 @@ export default function Header() {
           //@ts-ignore
           await window.ethereum.request({
             method: 'wallet_addEthereumChain',
-            params: [{ chainId: 250, rpcUrl: 'https://rpc.ftm.tools/' }],
+            params: [{ chainId: 137, rpcUrl: 'https://rpc.ftm.tools/' }],
           });
         } catch (addError) {
           // handle "add" error
@@ -89,7 +89,7 @@ export default function Header() {
         
         ?
         
-        chainId !== 250
+        chainId !== 137
 
         ?
 

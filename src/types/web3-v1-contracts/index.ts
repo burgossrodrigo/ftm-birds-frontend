@@ -2,6 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export type { AggregatorV3Interface } from "./AggregatorV3Interface";
+export type { Allowance } from "./Allowance";
 export type { Auctions } from "./Auctions";
 export type { Birds } from "./Birds";
 export type { ERC1155Receiver } from "./ERC1155Receiver";
@@ -15,5 +16,6 @@ export type { IERC721 } from "./IERC721";
 export type { IERC721Metadata } from "./IERC721Metadata";
 export type { IERC721Receiver } from "./IERC721Receiver";
 export type { Migrations } from "./Migrations";
+export type { Multisigned } from "./Multisigned";
 export type { NestV1 } from "./NestV1";
 export type { Ownable } from "./Ownable";
