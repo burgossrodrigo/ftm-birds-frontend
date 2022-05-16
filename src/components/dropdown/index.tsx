@@ -9,7 +9,7 @@ import matic from '../../static/matic.svg'
 import tether from '../../static/tether.png'
 
 export function SelectCoin() {
-  const { state, dispatch } = useContext(AppContext);
+  const { dispatch } = useContext(AppContext);
   const [coin, setCoin] = useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
