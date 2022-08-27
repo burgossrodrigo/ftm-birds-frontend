@@ -1,5 +1,5 @@
 import { Header } from './component/header'
-import { chain, createClient, configureChains, Chain, WagmiConfig  } from "wagmi"
+import { chain, createClient, configureChains, WagmiConfig  } from "wagmi"
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 import {
   RainbowKitProvider,

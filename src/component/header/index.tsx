@@ -1,5 +1,5 @@
-import { useContext } from 'react'
-import { AppContext } from '../../state/'
+//import { useContext } from 'react'
+//import { AppContext } from '../../state/'
 import styled from 'styled-components'
 
 import Wallet from './wallet'
@@ -44,14 +44,14 @@ const Navigation = styled.div`
 `
 
 export const Header = () => {
-    const { state } = useContext(AppContext)
+    //const { state } = useContext(AppContext)
 
     return(
         <Wrapper>
             <MainDiv>
             <SubWrapper>
                     <CustomImg src={tucano} />
-                </SubWrapper>                
+            </SubWrapper>                
                 <Navigation>
                     <span>Home</span>
                     <span>Nest</span>
